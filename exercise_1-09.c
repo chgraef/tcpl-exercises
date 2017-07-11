@@ -6,6 +6,12 @@
 
 int main()
 {
-    fprintf(stderr, "not yet done\n");
-    return 1;
+    int previous = getchar();
+    while (previous != EOF)
+    {
+        int c = getchar();
+        if (previous != ' ' || c != ' ')
+            putchar(previous);
+        previous = c;
+    }
 }
